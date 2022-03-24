@@ -1,0 +1,26 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const profissinalServico = new Schema({
+
+    profissonalId:{
+        type : mongoose.Types.ObjectId,
+        ref:'profissonal',
+        required: true,
+    },
+    servicolId:[{
+        type : mongoose.Types.ObjectId,
+        ref:'servico',
+        required: true,
+    }],
+    stats:{
+        type: String,
+        required: true,
+        enum: ['A', 'I','E'],//E excluir 
+        default: 'A'
+    }
+
+
+
+});
+module.exports = mongoose.model('ProfissinalServico', profissinalServico);
