@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const URI = '';
+const URI = 'mongodb+srv://estudio-user:12345@dev.pzjdw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
